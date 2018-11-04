@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CustomCamera" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="T1l-sE-c2R">
+                                <rect key="frame" x="16" y="94" width="343" height="418"/>
+                                <color key="backgroundColor" red="0.55940942380000003" green="1" blue="0.57605804120000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </imageView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G3S-k3-bci">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <color key="backgroundColor" red="1" green="0.81960784310000001" blue="0.76470588240000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <items>
+                                    <navigationItem title="Hex It" id="8gh-cS-UxO"/>
+                                </items>
+                            </navigationBar>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="001-5W-kK6">
+                                <rect key="frame" x="16" y="632" width="343" height="0.0"/>
+                                <subviews>
+                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dgG-fO-1wf">
+                                        <rect key="frame" x="0.0" y="0.0" width="42" height="0.0"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K7E-zo-dga">
+                                <rect key="frame" x="139" y="530" width="97" height="30"/>
+                                <state key="normal" title="Choose Photo"/>
+                                <connections>
+                                    <action selector="takePhotoTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bIT-2r-7XC"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="001-5W-kK6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0m8-Yl-tjD"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="001-5W-kK6" secondAttribute="bottom" constant="35" id="77p-U1-OXw"/>
+                            <constraint firstItem="G3S-k3-bci" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="ApK-z6-jjR"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="T1l-sE-c2R" secondAttribute="trailing" constant="16" id="BwO-RA-eBo"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="001-5W-kK6" secondAttribute="trailing" constant="16" id="HYL-8t-rTU"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="K7E-zo-dga" secondAttribute="trailing" constant="139" id="IOi-c3-goe"/>
+                            <constraint firstItem="G3S-k3-bci" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="cLN-b9-ZTz"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="K7E-zo-dga" secondAttribute="bottom" constant="107" id="eij-A7-VRS"/>
+                            <constraint firstItem="K7E-zo-dga" firstAttribute="top" secondItem="T1l-sE-c2R" secondAttribute="bottom" constant="18" id="fQt-FS-exo"/>
+                            <constraint firstItem="T1l-sE-c2R" firstAttribute="top" secondItem="G3S-k3-bci" secondAttribute="bottom" constant="50" id="fT7-yh-Uzc"/>
+                            <constraint firstItem="G3S-k3-bci" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="ieL-Ec-rfG"/>
+                            <constraint firstItem="K7E-zo-dga" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="139" id="leF-wI-Hot"/>
+                            <constraint firstItem="001-5W-kK6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="slY-sj-Xdz"/>
+                            <constraint firstItem="T1l-sE-c2R" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="yJY-jn-GW1"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="labelOne" destination="dgG-fO-1wf" id="mpf-7C-uow"/>
+                        <outlet property="myImg" destination="T1l-sE-c2R" id="tk1-Qc-lgp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="53.600000000000001" y="27.436281859070466"/>
+        </scene>
+    </scenes>
+</document>
