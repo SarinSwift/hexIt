@@ -20,6 +20,5 @@ class FirstViewController: UIViewController {
     }
     
     @IBAction func sendButtonTapped(_ sender: UIButton) {
-        print("going to send you there")
     }
 }
