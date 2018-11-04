@@ -12,12 +12,16 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
 
     @IBOutlet weak var labelOne: UILabel!
     @IBOutlet weak var labelTwo: UILabel!
+    @IBOutlet weak var colorSample: UIView!
     
     @IBOutlet weak var myImg: UIImageView!
     var imageForData: UIImage?
     var colorNumber: String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        view.gradientBackgroundColor(colorOne: .lightOrange, colorTwo: .lightYellow)
         
     }
     
@@ -39,19 +43,24 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         }
         picker.dismiss(animated: true, completion: nil)
         colorNumber = getImageHex()
+        colorSample.backgroundColor = getUImage()
         if labelOne != nil {
             labelOne.isHidden = false
-            labelOne.text = colorNumber
+            labelOne.text = "Hex #" + colorNumber!
         } else {
             print("returned nil")
             labelOne.isHidden = false
         }
         
     }
-    func getImageHex() -> String {
+    func getUImage() -> UIColor {
         let heightInPoints = imageForData!.size.height
         let widthInPoints = imageForData!.size.width
-        let picColor = imageForData!.getPixelColor(pos: CGPoint(x: (widthInPoints/2), y: (widthInPoints/2)))
+        let picColor = imageForData!.getPixelColor(pos: CGPoint(x: (widthInPoints/2), y: (heightInPoints/2)))
+        return picColor
+    }
+    func getImageHex() -> String {
+        let picColor = getUImage()
         let picColorHex = picColor.toHexString
         print(picColorHex)
         
